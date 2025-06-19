@@ -1,7 +1,0 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local SwingSaber = ReplicatedStorage.Events.SwingSaber -- RemoteEvent 
-
-while true do
-   SwingSaber:FireServer()
-    wait(0.1)
-end
