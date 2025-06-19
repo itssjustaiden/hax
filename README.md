@@ -1,3 +1,3 @@
-# dont be a skid
-
-i made these myself
+# MADE BY AIDEN, DC: itstime2sleep
+Saber Simulator
+``loadstring(game:HttpGet("https://raw.githubusercontent.com/ikilledaiden/hax/refs/heads/main/sabersim"))()``
