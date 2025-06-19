@@ -1,0 +1,3 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local SellStrength = ReplicatedStorage.Events.SellStrength -- RemoteEvent 
+SellStrength:FireServer()
