@@ -1,2 +1,114 @@
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then v19=v0(v3(v30,1,1));return "";else local v86=0;local v87;while true do if (v86==0) then v87=v2(v0(v30,16));if v19 then local v128=v5(v87,v19);v19=nil;return v128;else return v87;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v88=0 -0 ;local v89;while true do if ((0 -0)==v88) then v89=(v31/((3 -1)^(v32-(2 -(1 + 0)))))%((621 -(555 + (91 -27)))^(((v33-(932 -(857 + (1139 -(68 + 997))))) -(v32-(569 -(367 + (1471 -(226 + 1044)))))) + (928 -(214 + 713)))) ;return v89-(v89%(1 + 0)) ;end end else local v90=(1 + 1)^(v32-1) ;return (((v31%(v90 + v90))>=v90) and (878 -((1227 -945) + 595))) or (1637 -(1523 + 114)) ;end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35=0;local v36;local v37;while true do if ((0 -0)==v35) then v36,v37=v1(v16,v18,v18 + (119 -(32 + (208 -123))) );v18=v18 + (3 -1) ;v35=1 + 0 + 0 ;end if (v35==(1 + 0)) then return (v37 * (1213 -(892 + 65))) + v36 ;end end end local function v23() local v38,v39,v40,v41=v1(v16,v18,v18 + ((1008 -(915 + 82)) -8) );v18=v18 + (956 -(802 + 150)) ;return (v41 * ((127902110 -82732170) -(16540070 + 11852654))) + (v40 * (118879 -53343)) + (v39 * (187 + 69)) + v38 ;end local function v24() local v42=0 -0 ;local v43;local v44;local v45;local v46;local v47;local v48;while true do if (v42==2) then v47=v20(v44,1208 -(1069 + 118) ,70 -39 );v48=((v20(v44,32)==(1 -0)) and  -(1 + 0)) or (1 -(885 -(261 + 624))) ;v42=3 + 0 ;end if (v42==(791 -(368 + 423))) then v43=v23();v44=v23();v42=3 -(3 -1) ;end if (v42==(21 -(10 + (867 -(814 + 45))))) then if (v4
-
+local Rayfield=loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window=Rayfield:CreateWindow({
+Name="Cat Hub",
+Icon=0,
+LoadingTitle="made with love by aiden!!",
+LoadingSubtitle="discord: itstime2sleep",
+Theme="Default",
+ToggleUIKeybind="P",
+DisableRayfieldPrompts=false,
+DisableBuildWarnings=false,
+ConfigurationSaving={
+Enabled=true,
+FolderName="cathub",
+FileName="evil"
+},
+Discord={
+Enabled=false,
+Invite="noinvitelink",
+RememberJoins=true
+},
+KeySystem=false,
+KeySettings={
+Title="Untitled",
+Subtitle="Key System",
+Note="No method of obtaining the key is provided",
+FileName="Key",
+SaveKey=true,
+GrabKeyFromSite=false,
+Key={"fck my little femboy ass"}
+}
+})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ikilledaiden/hax/main/notif"))()
+local Tab=Window:CreateTab("Saber Simulator",4483362458)
+_G.autoSell=false
+_G.autoSABER=false
+_G.autoDNA=false
+local Toggle1=Tab:CreateToggle({
+Name="Auto Sell",
+CurrentValue=false,
+Flag="Toggle1",
+Callback=function(Value)
+_G.autoSell=Value
+if Value then
+spawn(function()
+local ReplicatedStorage=game:GetService("ReplicatedStorage")
+local SellStrength=ReplicatedStorage:WaitForChild("Events"):WaitForChild("SellStrength")
+while _G.autoSell do
+SellStrength:FireServer()
+wait(0.1)
+end
+end)
+end
+end,
+})
+local Button=Tab:CreateButton({
+Name="Auto Swing",
+Callback=function()
+_G.autoSwing=true
+spawn(function()
+local ReplicatedStorage=game:GetService("ReplicatedStorage")
+local SwingSaber=ReplicatedStorage:WaitForChild("Events"):WaitForChild("SwingSaber")
+while _G.autoSwing do
+SwingSaber:FireServer()
+wait(0.1)
+end
+end)
+end,
+})
+local Button=Tab:CreateButton({
+Name="Stop Auto Swing",
+Callback=function()
+_G.autoSwing=false
+end,
+})
+local Toggle3=Tab:CreateToggle({
+Name="Auto Buy Saber",
+CurrentValue=false,
+Flag="Toggle3",
+Callback=function(Value)
+_G.autoSABER=Value
+if Value then
+spawn(function()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UIAction = ReplicatedStorage.Events.UIAction -- RemoteEvent
+while _G.autoSABER do
+UIAction:FireServer(
+    "BuyAllWeapons"
+)
+wait(0.1)
+end
+end)
+end
+end,
+})
+local Toggle69=Tab:CreateToggle({
+Name="Auto Buy DNA",
+CurrentValue=false,
+Flag="Toggle69",
+Callback=function(Value)
+_G.autoDNA=Value
+if Value then
+spawn(function()
+   local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UIAction = ReplicatedStorage.Events.UIAction -- RemoteEvent
+while _G.autoDNA do
+UIAction:FireServer(
+    "BuyAllDNAs"
+)
+wait(0.1)
+end
+end)
+end
+end,
+})
