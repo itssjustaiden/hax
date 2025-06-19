@@ -1,5 +1,0 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UIAction = ReplicatedStorage.Events.UIAction -- RemoteEvent 
-UIAction:FireServer(
-    "BuyAllDNAs"
-)
