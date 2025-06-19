@@ -1,7 +1,0 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local SellStrength = ReplicatedStorage:WaitForChild("Events"):WaitForChild("SellStrength")
-
-while true do
-    SellStrength:FireServer()
-    wait(0.1)
-end
