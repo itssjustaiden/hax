@@ -29,6 +29,12 @@ GrabKeyFromSite=false,
 Key={"fck my little femboy ass"}
 }
 })
+Rayfield:Notify({
+   Title = "made with love <3",
+   Content = "discord: itstime2sleep",
+   Duration = 5,
+   Image = 4483362458,
+})
 local Tab=Window:CreateTab("Saber Simulator",4483362458)
 _G.autoSell=false
 _G.autoSABER=false
@@ -91,9 +97,6 @@ end)
 end
 end,
 })
-wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ikilledaiden/hax/main/notif"))()
-wait(1)
 local Toggle69=Tab:CreateToggle({
 Name="Auto Buy DNA",
 CurrentValue=false,
