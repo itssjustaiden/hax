@@ -102,21 +102,25 @@ local function createToggleGui()
 	screenGui.Name = "BlockAutoToggleGui"
 	screenGui.ResetOnSpawn = true
 	screenGui.Parent = localPlayer:WaitForChild("PlayerGui")
-	
+
 	toggleButton = Instance.new("TextButton")
-	toggleButton.Size = UDim2.new(0, 60, 0, 30)  -- smaller width
+	toggleButton.Size = UDim2.new(0, 60, 0, 30)
 	toggleButton.Position = UDim2.new(0, 10, 0, 10)
 	toggleButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 	toggleButton.TextColor3 = Color3.new(1, 1, 1)
+	toggleButton.AutoButtonColor = true
+	toggleButton.TextScaled = true
 	toggleButton.Parent = screenGui
-	
+
 	strictButton = Instance.new("TextButton")
-	strictButton.Size = UDim2.new(0, 60, 0, 30)  -- smaller width too
+	strictButton.Size = UDim2.new(0, 60, 0, 30)
 	strictButton.Position = UDim2.new(0, 10, 0, 50)
 	strictButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 	strictButton.TextColor3 = Color3.new(1, 1, 1)
+	strictButton.AutoButtonColor = true
+	strictButton.TextScaled = true
 	strictButton.Parent = screenGui
-	
+
 	rangeBox = Instance.new("TextBox")
 	rangeBox.Size = UDim2.new(0, 50, 0, 30)
 	rangeBox.Position = UDim2.new(0, 10, 0, 90)
@@ -124,38 +128,38 @@ local function createToggleGui()
 	rangeBox.TextColor3 = Color3.new(1, 1, 1)
 	rangeBox.ClearTextOnFocus = false
 	rangeBox.Parent = screenGui
-	
+
 	local toggleFlag = getBoolFlag("AutoBlockToggle")
 	local strictFlag = getBoolFlag("AutoBlockStrictRange")
 	local rangeFlag = getNumberFlag("AutoBlockRange")
-	
+
 	toggleOn = toggleFlag.Value
 	strictRangeOn = strictFlag.Value
 	detectionRange = rangeFlag.Value
 	rangeBox.Text = tostring(detectionRange)
-	
+
 	local function updateButtons()
 		toggleButton.Text = toggleOn and "ON" or "OFF"
 		toggleButton.BackgroundColor3 = toggleOn and Color3.fromRGB(0, 170, 0) or Color3.fromRGB(50, 50, 50)
-		
+
 		strictButton.Text = strictRangeOn and "ON" or "OFF"
 		strictButton.BackgroundColor3 = strictRangeOn and Color3.fromRGB(0, 170, 0) or Color3.fromRGB(50, 50, 50)
 	end
-	
+
 	updateButtons()
-	
+
 	toggleButton.MouseButton1Click:Connect(function()
 		toggleOn = not toggleOn
 		toggleFlag.Value = toggleOn
 		updateButtons()
 	end)
-	
+
 	strictButton.MouseButton1Click:Connect(function()
 		strictRangeOn = not strictRangeOn
 		strictFlag.Value = strictRangeOn
 		updateButtons()
 	end)
-	
+
 	rangeBox.FocusLost:Connect(function(enterPressed)
 		local num = tonumber(rangeBox.Text)
 		if num then
