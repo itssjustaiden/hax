@@ -104,14 +104,14 @@ local function createToggleGui()
 	screenGui.Parent = localPlayer:WaitForChild("PlayerGui")
 	
 	toggleButton = Instance.new("TextButton")
-	toggleButton.Size = UDim2.new(0, 130, 0, 30)
+	toggleButton.Size = UDim2.new(0, 60, 0, 30)  -- smaller width
 	toggleButton.Position = UDim2.new(0, 10, 0, 10)
 	toggleButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 	toggleButton.TextColor3 = Color3.new(1, 1, 1)
 	toggleButton.Parent = screenGui
 	
 	strictButton = Instance.new("TextButton")
-	strictButton.Size = UDim2.new(0, 180, 0, 30)
+	strictButton.Size = UDim2.new(0, 60, 0, 30)  -- smaller width too
 	strictButton.Position = UDim2.new(0, 10, 0, 50)
 	strictButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 	strictButton.TextColor3 = Color3.new(1, 1, 1)
