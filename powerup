@@ -1,0 +1,489 @@
+local mg,lc,gh,Vd,Ba,xd=type,pairs,bit32.bxor,getmetatable;
+local Wg,gb,B,hf,n,ub,Vb,Vc,Ja,Cg,Pa,uh,Me,Rf,Fe,Fh,ic,ga,La,v,Zg,od,p,Jd,ze,Hb,C,lb,vc,qh,ag,cb,Nd,Cf,kc,Xb,Id,Ed,I,_a,mh,Da,Nf,mb
+cb=(getfenv());
+vc,Nf,uh=(string.char),(string.byte),(bit32 .bxor);
+Jd=function(V,bf)
+    local kf,kb,e,hg,if_,Qe,fd,Xa
+    hg,if_={},function(F,aa,Ue)
+        hg[F]=gh(aa,64101)-gh(Ue,46484)
+        return hg[F]
+    end
+    Xa=hg[-1699]or if_(-1699,6857,6246)
+    repeat
+        while true do
+            if Xa<=25304 then
+                if Xa<=7686 then
+                    if(kf>=0 and fd>e)or((kf<0 or kf~=kf)and fd<e)then
+                        Xa=48223
+                    else
+                        Xa=43383
+                    end
+                elseif Xa<=11127 then
+                    fd=fd+kf;
+                    Qe=fd;
+                    if fd~=fd then
+                        Xa=48223
+                    else
+                        Xa=2386
+                    end
+                else
+                    kb='';
+                    e,fd,kf=(#V-1)+66,66,1
+                    Xa=43970
+                end
+            elseif Xa<=45803 then
+                if Xa<=43676 then
+                    kb=kb..vc(uh(Nf(V,(Qe-66)+1),Nf(bf,(Qe-66)%#bf+1)))
+                    Xa=hg[30656]or if_(30656,19155,14614)
+                else
+                    Qe=fd;
+                    if e~=e then
+                        Xa=48223
+                    else
+                        Xa=2386
+                    end
+                end
+            else
+                return kb
+            end
+        end
+    until Xa==62581
+end;
+Ja=(select);
+Cg=(function(...)
+    return{[1]={...},[2]=Ja('#',...)}
+end);
+Hb=((function()
+    local function wa(qc,Yh,Mg)
+        if Yh>Mg then
+            return
+        end
+        return qc[Yh],wa(qc,Yh+1,Mg)
+    end
+    return wa
+end)());
+Vb,Ed=(string.gsub),(string.char);
+I=(function(Ec)
+    Ec=Vb(Ec,'[^ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=]','')
+    return(Ec:gsub('.',function(Ee)
+        if(Ee=='=')then
+            return''
+        end
+        local sa,gc='',(('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'):find(Ee)-1)
+        for Lf=6,1,-1 do
+            sa=sa..(gc%2^Lf-gc%2^(Lf-1)>0 and'1'or'0')
+        end
+        return sa;
+    end):gsub('%d%d%d?%d?%d?%d?%d?%d?',function(eg)
+        if(#eg~=8)then
+            return''
+        end
+        local Nb=0
+        for Ac=1,8 do
+            Nb=Nb+(eg:sub(Ac,Ac)=='1'and 2^(8-Ac)or 0)
+        end
+        return Ed(Nb)
+    end))
+end);
+Pa,gb,ag,ub,_a,Wg,Da,Zg=cb[Jd('d\161/~\187:','\23\213]')][Jd('\188\142\171\168\131\176','\201\224\219')],cb[Jd('\28\171\154\6\177\143','o\223\232')][Jd('\182\176\167','\197')],cb[Jd('1\219\139+\193\158','B\175\249')][Jd("G;Q\'",'%B')],cb[Jd('\240\209\230\139\160','\146\184')][Jd('\1?)\4*5','mLA')],cb[Jd('I\166_\252\25','+\207')][Jd("S\212\'H\193;",'!\167O')],cb[Jd('\178\141\164\215\226','\208\228')][Jd('\216\179\212\182','\186\210')],cb[Jd('\f\55\26:\29','xV')][Jd('\158\254\144\158\240\138','\253\145\254')],{};
+Vc=(function(Af)
+    local Zb,Zf,cc,Ob,le,pg,wd,wf,dd,ha,hh,Bd,sg,Cd,yf,Jf,qe,_g
+    Jf,le={},function(Je,yc,Za)
+        Jf[Je]=gh(yc,17988)-gh(Za,24462)
+        return Jf[Je]
+    end
+    qe=Jf[-20705]or le(-20705,52604,24783)
+    repeat
+        while true do
+            if qe<=30238 then
+                if qe<=15958 then
+                    if qe<=5376 then
+                        wd=ag(Af,pg);
+                        pg=pg+1
+                        Zf,wf,Zb=(8)+85,86,1
+                        qe=45421
+                    else
+                        wd=_a(wd,1)
+                        if _g then
+                            qe=Jf[24002]or le(24002,43140,24957)
+                            break
+                        end
+                        qe=Jf[31222]or le(31222,67995,12761)
+                    end
+                elseif qe<=24311 then
+                    if qe<=19448 then
+                        Ob=Zg[Af];
+                        if not(Ob)then
+                            qe=Jf[-18039]or le(-18039,36726,20490)
+                            break
+                        else
+                            qe=Jf[17443]or le(17443,91262,54036)
+                            break
+                        end
+                        qe=Jf[-3559]or le(-3559,83676,6500)
+                    else
+                        if pg<=#Af then
+                            qe=Jf[-19465]or le(-19465,127569,45182)
+                            break
+                        end
+                        qe=Jf[17234]or le(17234,35082,61325)
+                    end
+                else
+                    if(Zb>=0 and wf>Zf)or((Zb<0 or Zb~=Zb)and wf<Zf)then
+                        qe=Jf[-27412]or le(-27412,65844,61200)
+                    else
+                        qe=50050
+                    end
+                end
+            elseif qe>47558 then
+                if qe>53893 then
+                    if qe>56890 then
+                        wf=wf+Zb;
+                        Cd=wf;
+                        if wf~=wf then
+                            qe=Jf[-13063]or le(-13063,96431,63383)
+                        else
+                            qe=Jf[-13598]or le(-13598,67993,33387)
+                        end
+                    else
+                        if not(pg+1<=#Af)then
+                            qe=Jf[-14059]or le(-14059,84387,44818)
+                            break
+                        else
+                            qe=Jf[-3227]or le(-3227,77773,49552)
+                            break
+                        end
+                        qe=Jf[-28163]or le(-28163,44254,38081)
+                    end
+                elseif qe>51062 then
+                    dd=Pa(Jd('t\3x','J'),Af,pg);
+                    pg=pg+2
+                    ha,yf=#cc-_a(dd,4),Wg(dd,(hh-1))+3
+                    _g=gb(cc,ha,ha+yf-1)
+                    qe=Jf[-16368]or le(-16368,32216,17375)
+                elseif qe>50131 then
+                    _g=gb(Af,pg,pg)
+                    pg=pg+1
+                    qe=Jf[-18748]or le(-18748,62522,52413)
+                else
+                    _g=nil;
+                    if not(Wg(wd,1)~=0)then
+                        qe=Jf[30832]or le(30832,127538,34311)
+                        break
+                    else
+                        qe=Jf[24247]or le(24247,42115,51520)
+                        break
+                    end
+                    qe=Jf[29141]or le(29141,58431,56510)
+                end
+            elseif qe<=42457 then
+                if qe>37995 then
+                    if qe<=38457 then
+                        return Ob
+                    else
+                        if pg<=#Af then
+                            qe=2741
+                        else
+                            qe=37381
+                        end
+                    end
+                else
+                    wd=Da(Bd);
+                    Zg[Af]=wd
+                    return wd
+                end
+            elseif qe<=46269 then
+                if qe<=45213 then
+                    Bd[#Bd+1]=_g
+                    cc=gb(cc.._g,-sg)
+                    qe=Jf[-23662]or le(-23662,73476,10294)
+                else
+                    Cd=wf;
+                    if Zf~=Zf then
+                        qe=Jf[-31637]or le(-31637,58760,21364)
+                    else
+                        qe=29176
+                    end
+                end
+            else
+                sg,hh,pg,Bd,cc=ub(1,12),ub(1,4),1,{},'';
+                qe=Jf[2739]or le(2739,45852,264);
+            end
+        end
+    until qe==1023
+end);
+ga=(function()
+    local Pd,ka,Oe,jb,Hg,fc,Ya,K,Uh,uf,Ae,Cb=cb[Jd('t\ab]$','\22n')][Jd('\140\1\129\v','\238y')],cb[Jd('\195\161\213\251\147','\161\200')][Jd('%H)M','G)')],cb[Jd('A\1W[\17','#h')][Jd('\250\247\234','\152')],cb[Jd('\190\v\168Q\238','\220b')][Jd('9\222\49<\203-','U\173Y')],cb[Jd('\176\186\166\224\224','\210\211')][Jd('Y\t\217B\28\197','+z\177')],cb[Jd('\172\134$\182\156\49','\223\242V')][Jd('x~i','\v')],cb[Jd('/\240\172\53\234\185','\\\132\222')][Jd('J$Y.',':E')],cb[Jd('2\162\209(\184\196','A\214\163')][Jd('\129\212C\149\217X','\244\186\51')],cb[Jd('\28\182\210\6\172\199','o\194\160')][Jd('\"\53 ','P')],cb[Jd('QgGj@','%\6')][Jd(':\128)\138','J\225')],cb[Jd('\192C\214N\209','\180\"')][Jd('\16B%\4O>','e,U')],cb[Jd('\198\252\208\241\215','\178\157')][Jd('\200^#\196B$','\161\48P')]
+    local function zb(Ng,Kf,Gg,da,oh)
+        local rb,Db,ye,th=Ng[Kf],Ng[Gg],Ng[da],Ng[oh]
+        local c
+        rb=ka(rb+Db,4294967295)
+        c=Pd(th,rb);
+        th=ka(Oe(jb(c,16),Hg(c,16)),4294967295)
+        ye=ka(ye+th,4294967295)
+        c=Pd(Db,ye);
+        Db=ka(Oe(jb(c,12),Hg(c,20)),4294967295)
+        rb=ka(rb+Db,4294967295)
+        c=Pd(th,rb);
+        th=ka(Oe(jb(c,8),Hg(c,24)),4294967295)
+        ye=ka(ye+th,4294967295)
+        c=Pd(Db,ye);
+        Db=ka(Oe(jb(c,7),Hg(c,25)),4294967295)
+        Ng[Kf],Ng[Gg],Ng[da],Ng[oh]=rb,Db,ye,th
+        return Ng
+    end
+    local Ge,mf={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+    local zf=function(jh,pb,Yc)
+        local Be,Y,ja,wb,rf,A,zg,Xe,lg
+        Y,zg={},function(dc,Xh,S)
+            Y[dc]=gh(Xh,40995)-gh(S,47711)
+            return Y[dc]
+        end
+        Xe=Y[-28642]or zg(-28642,111563,3579)
+        repeat
+            while true do
+                if Xe>31280 then
+                    if Xe>47926 then
+                        if Xe>54373 then
+                            if Xe<=57965 then
+                                A,lg,rf=1,116,(16)+115
+                                Xe=48496
+                            elseif Xe>59399 then
+                                ja=lg;
+                                if rf~=rf then
+                                    Xe=2310
+                                else
+                                    Xe=Y[-25798]or zg(-25798,56241,41836)
+                                end
+                            else
+                                return Be
+                            end
+                        elseif Xe<=49938 then
+                            ja=lg;
+                            if rf~=rf then
+                                Xe=Y[15427]or zg(15427,82784,17616)
+                            else
+                                Xe=19178
+                            end
+                        else
+                            Be[(ja-115)]=ka(Be[(ja-115)]+wb[(ja-115)],4294967295)
+                            Xe=Y[-26241]or zg(-26241,102980,25081)
+                        end
+                    elseif Xe>40481 then
+                        wb[(ja-84)]=Be[(ja-84)]
+                        Xe=Y[-7216]or zg(-7216,25154,58301)
+                    else
+                        Be[(ja-118)+4]=jh[(ja-118)]
+                        Xe=Y[-15030]or zg(-15030,126407,16579)
+                    end
+                elseif Xe>15429 then
+                    if Xe>21992 then
+                        if Xe<=25379 then
+                            if Xe>23696 then
+                                if(A>=0 and lg>rf)or((A<0 or A~=A)and lg<rf)then
+                                    Xe=Y[-2808]or zg(-2808,61135,65465)
+                                else
+                                    Xe=35601
+                                end
+                            elseif Xe>22914 then
+                                if Xe<=23556 then
+                                    if(A>=0 and lg>rf)or((A<0 or A~=A)and lg<rf)then
+                                        Xe=2871
+                                    else
+                                        Xe=Y[-22721]or zg(-22721,128171,6408)
+                                    end
+                                else
+                                    Be,wb=Ge,mf;
+                                    Be[1],Be[2],Be[3],Be[4]=1803751668,2881626831,922110039,3475166489
+                                    rf,lg,A=(8)+118,119,1
+                                    Xe=60251
+                                end
+                            else
+                                lg=lg+A;
+                                ja=lg;
+                                if lg~=lg then
+                                    Xe=58548
+                                else
+                                    Xe=Y[4008]or zg(4008,107092,3538)
+                                end
+                            end
+                        elseif Xe<=27650 then
+                            lg=lg+A;
+                            ja=lg;
+                            if lg~=lg then
+                                Xe=Y[26381]or zg(26381,18371,26358)
+                            else
+                                Xe=23492
+                            end
+                        else
+                            if(A>=0 and lg>rf)or((A<0 or A~=A)and lg<rf)then
+                                Xe=12512
+                            else
+                                Xe=Y[-11350]or zg(-11350,3794,51450)
+                            end
+                        end
+                    elseif Xe<=18568 then
+                        if Xe>16397 then
+                            zb(wb,1,5,9,13);
+                            zb(wb,2,6,10,14);
+                            zb(wb,3,7,11,15);
+                            zb(wb,4,8,12,16);
+                            zb(wb,1,6,11,16);
+                            zb(wb,2,7,12,13);
+                            zb(wb,3,8,9,14);
+                            zb(wb,4,5,10,15)
+                            Xe=Y[7796]or zg(7796,21536,65)
+                        else
+                            Be[(ja-223)+13]=Yc[(ja-223)]
+                            Xe=Y[-3328]or zg(-3328,106820,25537)
+                        end
+                    elseif Xe>20439 then
+                        if Xe<=21510 then
+                            lg=lg+A;
+                            ja=lg;
+                            if lg~=lg then
+                                Xe=Y[-15744]or zg(-15744,24987,749)
+                            else
+                                Xe=Y[14073]or zg(14073,100677,32088)
+                            end
+                        else
+                            if(A>=0 and lg>rf)or((A<0 or A~=A)and lg<rf)then
+                                Xe=Y[7836]or zg(7836,120002,8509)
+                            else
+                                Xe=17359
+                            end
+                        end
+                    else
+                        if(A>=0 and lg>rf)or((A<0 or A~=A)and lg<rf)then
+                            Xe=Y[16374]or zg(16374,95836,19348)
+                        else
+                            Xe=Y[12861]or zg(12861,75004,1652)
+                        end
+                    end
+                elseif Xe>8565 then
+                    if Xe<=12503 then
+                        if Xe>10567 then
+                            ja=lg;
+                            if rf~=rf then
+                                Xe=Y[1046]or zg(1046,15049,53333)
+                            else
+                                Xe=28549
+                            end
+                        else
+                            lg=lg+A;
+                            ja=lg;
+                            if lg~=lg then
+                                Xe=12512
+                            else
+                                Xe=28549
+                            end
+                        end
+                    elseif Xe>13666 then
+                        if Xe>14679 then
+                            lg=lg+A;
+                            ja=lg;
+                            if lg~=lg then
+                                Xe=Y[28121]or zg(28121,19030,43689)
+                            else
+                                Xe=21701
+                            end
+                        else
+                            ja=lg;
+                            if rf~=rf then
+                                Xe=Y[1741]or zg(1741,10465,51156)
+                            else
+                                Xe=23492
+                            end
+                        end
+                    else
+                        A,rf,lg=1,(16)+84,85
+                        Xe=Y[-3760]or zg(-3760,56137,63743)
+                    end
+                elseif Xe<=3113 then
+                    if Xe>2590 then
+                        rf,lg,A=(10)+181,182,1
+                        Xe=Y[-647]or zg(-647,58830,36094)
+                    else
+                        Be[13]=pb
+                        A,lg,rf=1,224,(3)+223
+                        Xe=10949
+                    end
+                else
+                    ja=lg;
+                    if rf~=rf then
+                        Xe=Y[-6681]or zg(-6681,66922,29077)
+                    else
+                        Xe=Y[-31801]or zg(-31801,16058,62347)
+                    end
+                end
+            end
+        until Xe==16087
+    end
+    local function ac(Uf,ne,Sa,id,qg)
+        local Kc,Pg,Sd,ih,Bc,eh,pa,oa,zh,vf
+        zh,eh={},function(W,h,ue)
+            zh[W]=gh(h,31056)-gh(ue,53717)
+            return zh[W]
+        end
+        Pg=zh[17824]or eh(17824,88923,33321)
+        repeat
+            while true do
+                if Pg>28854 then
+                    if Pg<=42407 then
+                        if Pg<=36355 then
+                            Kc[(vf-90)]=Pd(Kc[(vf-90)],pa[(vf-90)])
+                            Pg=zh[2407]or eh(2407,49085,34835)
+                        elseif Pg>40356 then
+                            Kc=fc(id,qg);
+                            id=Kc..Uh(Jd('\3','\3'),64-Sd)
+                            qg=1
+                            Pg=zh[31023]or eh(31023,3238,40236)
+                        else
+                            return Bc
+                        end
+                    else
+                        Sd=#id-qg+1;
+                        if Sd<64 then
+                            Pg=zh[-15973]or eh(-15973,66676,3976)
+                            break
+                        end
+                        Pg=zh[-26805]or eh(-26805,41167,24951)
+                    end
+                elseif Pg>16450 then
+                    Bc=Bc+oa;
+                    vf=Bc;
+                    if Bc~=Bc then
+                        Pg=zh[-22690]or eh(-22690,3036,34571)
+                    else
+                        Pg=zh[5797]or eh(5797,55590,23757)
+                    end
+                elseif Pg>7725 then
+                    if Pg<=10095 then
+                        Bc=fc(Bc,1,Sd)
+                        Pg=zh[6079]or eh(6079,70824,162)
+                    else
+                        cb[Jd('o\3vk\2q','\14p\5')](#id>=64)
+                        Kc,pa=uf(K(Jd('H]=\174\192\166\179\242\248(\149\51\173\179\53\251@]=\174\192\166\179\242\248(\149\51\173\179\53\251@','t\20\t\231\244\239\135\187\204a\161z\153\250\1\178'),id,qg)),zf(Uf,ne,Sa)
+                        ih,oa,Bc=(16)+90,1,91
+                        Pg=6089
+                    end
+                elseif Pg<=6022 then
+                    if(oa>=0 and Bc>ih)or((oa<0 or oa~=oa)and Bc<ih)then
+                        Pg=zh[-13049]or eh(-13049,1764,46547)
+                    else
+                        Pg=zh[-18666]or eh(-18666,96071,16653)
+                    end
+                elseif Pg<=6587 then
+                    vf=Bc;
+                    if ih~=ih then
+                        Pg=zh[4322]or eh(4322,43813,26386)
+                    else
+                        Pg=4958
+                    end
+                else
+                    Bc=Ya(Jd('J\134\203:\196\164\235ka\127\131\208\252\253\48\147B\134\203:\196\164\235ka\127\131\208\252\253\48\147B','v\207\255s\240\237\223\"U6\183\153\200\180\4\218'),Ae(Kc));
+                    if Sd<64 then
+                        Pg=zh[-14324]or eh(-14324,51980,23982)
+                        break
+                    end
+                    
