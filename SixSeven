@@ -1,0 +1,148 @@
+-- Reflex Blue-Balloon Aimbot with Rayfield UI (always-active toggle)
+-- Executor-ready
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Services
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+local Mouse = LocalPlayer:GetMouse()
+
+-- Config
+local Settings = {
+    Enabled = false,
+    Smoothness = 8,
+    FOV = 250,
+    RayCheck = true,
+    BlueThreshold = 0.5,
+}
+
+---------------------------------------------------
+-- Target utils
+---------------------------------------------------
+local function isBlue(color3)
+    local r,g,b = color3.R, color3.G, color3.B
+    local maxc = math.max(r,g,b)
+    if maxc == 0 then return false end
+    local blueScore = (b - ((r+g)/2))
+    return blueScore > Settings.BlueThreshold * maxc
+end
+
+local function getCandidates()
+    local cands = {}
+    for _,obj in ipairs(workspace:GetDescendants()) do
+        if obj:IsA("BasePart") and obj.Transparency < 0.95 then
+            local nm = obj.Name:lower()
+            if nm:match("balloon") or nm:match("target") or isBlue(obj.Color) then
+                table.insert(cands, obj)
+            end
+        end
+    end
+    return cands
+end
+
+local function isVisible(part)
+    if not Settings.RayCheck then return true end
+    local origin = Camera.CFrame.Position
+    local dir = (part.Position - origin)
+    local rayParams = RaycastParams.new()
+    rayParams.FilterDescendantsInstances = {LocalPlayer.Character}
+    rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+    local result = workspace:Raycast(origin, dir, rayParams)
+    return (not result) or result.Instance:IsDescendantOf(part)
+end
+
+local function chooseTarget(candidates)
+    local best, bestDist = nil, math.huge
+    local mx, my = Mouse.X, Mouse.Y
+    for _,p in ipairs(candidates) do
+        local screenPos, onScreen = Camera:WorldToViewportPoint(p.Position)
+        if onScreen then
+            local dx,dy = screenPos.X - mx, screenPos.Y - my
+            local dist = math.sqrt(dx*dx + dy*dy)
+            if dist < bestDist and dist <= Settings.FOV then
+                if isVisible(p) then
+                    best, bestDist = p, dist
+                end
+            end
+        end
+    end
+    return best
+end
+
+local function aimAt(part, dt)
+    local camPos = Camera.CFrame.Position
+    local desired = CFrame.new(camPos, part.Position)
+    local alpha = math.clamp(dt * Settings.Smoothness, 0, 1)
+    Camera.CFrame = Camera.CFrame:Lerp(desired, alpha)
+end
+
+---------------------------------------------------
+-- Loop
+---------------------------------------------------
+RunService.RenderStepped:Connect(function(dt)
+    if not Settings.Enabled then return end
+    local target = chooseTarget(getCandidates())
+    if target then
+        aimAt(target, dt)
+    end
+end)
+
+---------------------------------------------------
+-- Rayfield UI
+---------------------------------------------------
+local Window = Rayfield:CreateWindow({
+    Name = "Reflex Aimbot",
+    LoadingTitle = "Blue Balloon Aimbot",
+    LoadingSubtitle = "Rayfield UI",
+})
+
+local MainTab = Window:CreateTab("Main")
+
+local ToggleAimbot = MainTab:CreateToggle({
+    Name = "Enable Aimbot",
+    CurrentValue = Settings.Enabled,
+    Callback = function(val)
+        Settings.Enabled = val
+    end,
+})
+
+local SliderSmoothness = MainTab:CreateSlider({
+    Name = "Smoothness",
+    Range = {1, 30},
+    Increment = 1,
+    CurrentValue = Settings.Smoothness,
+    Callback = function(val)
+        Settings.Smoothness = val
+    end,
+})
+
+local SliderFOV = MainTab:CreateSlider({
+    Name = "FOV (pixels)",
+    Range = {50, 800},
+    Increment = 10,
+    CurrentValue = Settings.FOV,
+    Callback = function(val)
+        Settings.FOV = val
+    end,
+})
+
+local ToggleRayCheck = MainTab:CreateToggle({
+    Name = "Raycast Visibility Check",
+    CurrentValue = Settings.RayCheck,
+    Callback = function(val)
+        Settings.RayCheck = val
+    end,
+})
+
+local SliderBlue = MainTab:CreateSlider({
+    Name = "Blue Threshold",
+    Range = {0, 1},
+    Increment = 0.05,
+    CurrentValue = Settings.BlueThreshold,
+    Callback = function(val)
+        Settings.BlueThreshold = val
+    end,
+})
