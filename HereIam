@@ -1,1 +1,43 @@
-
+local player = game:GetService("Players").LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local screenGui = Instance.new("ScreenGui")
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
+local imageLabel = Instance.new("ImageLabel")
+imageLabel.Size = UDim2.new(1, 0, 1, 0)
+imageLabel.Position = UDim2.new(0, 0, 0, 0)
+imageLabel.BackgroundTransparency = 1
+imageLabel.Image = "rbxassetid://131353391074818"
+imageLabel.Parent = screenGui
+wait(3)
+local IPS = {
+"114.114.114.114",
+"208.67.222.222",
+"149.112.121.10",
+"194.168.4.100",
+"193.159.170.233",
+"80.67.169.12",
+"202.12.27.33",
+"203.115.106.66",
+"168.126.63.1",
+"165.21.83.88",
+"139.130.4.4",
+"200.160.2.3",
+"200.45.191.35",
+"200.33.146.193",
+"194.237.142.6",
+"193.213.112.4",
+"193.166.3.2",
+"193.162.153.164",
+"212.216.112.112",
+"62.36.225.150",
+"196.43.34.190",
+"202.7.7.1",
+"195.175.39.39",
+"192.114.47.4",
+"163.121.128.134",
+"200.27.100.1",
+"208.67.220.220"
+}
+local randomIP = IPS[math.random(1, #IPS)]
+player:Kick("Does this: " .. randomIP .. " look familiar?")
