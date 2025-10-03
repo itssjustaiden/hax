@@ -1,10 +1,10 @@
 "Shedletsky", "", -- default
 
-"Guest 1337", "", -- default
-"Guest 1337", "", -- default
+"Guest 1337", "", -- default parry
+"Guest 1337", "", -- default punch
 
-"Two time", "", -- default
-"Two time", "", -- default
+"Two time", "", -- default stab
+"Two time", "", -- default lunge
 
 "Chance", "", -- default
 "Elliot", "", -- default
