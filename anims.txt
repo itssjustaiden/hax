@@ -1,17 +1,24 @@
-"Shedletsky", "", -- default
+"Shedletsky", "116618003477002", -- default shed slash
 
-"Guest 1337", "", -- default parry
-"Guest 1337", "", -- default punch
+"Guest 1337", "87259391926321",  -- default guest punch/parry
 
-"Two time", "", -- default stab
-"Two time", "", -- default lunge
+"Two time", "86545133269813",    -- default 2time stab
+"Two time", "89448354637442",    -- default 2time lunge
 
-"Chance", "", -- default
-"Elliot", "", -- default
+"Chance", "133491532453922",     -- default chance
 
+"Elliot", "114155003741146",     -- default pizza throw
 
-"John Doe", "", -- default
-"1x1x1x1", "", -- default
-"Noli", "", -- default
-"C00lkidd", "", -- default
-"Slasher", "", -- default
+"John Doe", "",                  -- no anim cuz my dex broke
+
+"1x1x1x1", "83829782357897",     -- default 1x4 slash
+"1x1x1x1", "119181003138006",    -- default 1x4 entang
+"1x1x1x1", "131430497821198",    -- default 1x4 mass
+
+"Noli", "106538427162796",       -- default noli stab
+
+"C00lkidd", "18885909645",       -- default coolkid attack
+
+"C00lkidd", "18885919947",       -- default coolkid nature
+
+"Slasher", "",                   -- no anim cuz my dex broke
